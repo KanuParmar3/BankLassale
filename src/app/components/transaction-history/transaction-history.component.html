@@ -1,0 +1,37 @@
+<div class="transaction-history-container">
+  <h2>Transaction History</h2>
+
+  <form (ngSubmit)="getTransactionHistory()">
+    <div class="form-group">
+      <label for="days">Enter number of days:</label>
+      <input
+        type="number"
+        [(ngModel)]="days"
+        id="days"
+        placeholder="Enter number of days"
+        required
+      />
+    </div>
+
+    <button type="submit" [disabled]="!days">Get Transaction History</button>
+  </form>
+
+  <div *ngIf="transactions.length > 0">
+    <h3>Transactions for the past {{ days }} days:</h3>
+    <ul>
+      <li *ngFor="let transaction of transactions">
+        <p><strong>Amount:</strong> {{ transaction.amount | currency }}</p>
+        <p>
+          <strong>Date:</strong> {{ transaction.dateTime | date : "short" }}
+        </p>
+        <p>
+          <strong>From Account:</strong> {{ transaction.fromAccount.email }}
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="transactions.length === 0 && days > 0">
+    <p>No transactions found for the past {{ days }} days.</p>
+  </div>
+</div>

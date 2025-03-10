@@ -1,0 +1,40 @@
+<div class="transfer-funds-container">
+  <h2>Transfer Funds</h2>
+
+  <form (ngSubmit)="transferFunds()">
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input
+        type="number"
+        [(ngModel)]="amount"
+        id="amount"
+        placeholder="Enter amount"
+        required
+        min="1"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <input
+        type="text"
+        [(ngModel)]="message"
+        id="message"
+        placeholder="Optional message"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="account">Recipient Email:</label>
+      <input
+        type="email"
+        [(ngModel)]="account"
+        id="account"
+        placeholder="Enter recipient email"
+        required
+      />
+    </div>
+
+    <button type="submit" [disabled]="!amount || !account">Transfer</button>
+  </form>
+</div>

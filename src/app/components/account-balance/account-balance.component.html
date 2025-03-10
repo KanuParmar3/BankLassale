@@ -1,0 +1,19 @@
+<div class="balance-container">
+  <button (click)="getAccountBalance()" [disabled]="isLoading">
+    Get Account Balance
+  </button>
+
+  <div *ngIf="isLoading" class="loading-indicator">
+    <p>Loading...</p>
+  </div>
+
+  <div *ngIf="balance !== null && finalBalance !== null" class="balance-info">
+    <h3>Account Balance:</h3>
+    <p><strong>Balance:</strong> {{ balance | currency }}</p>
+    <p><strong>Final Balance:</strong> {{ finalBalance | currency }}</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

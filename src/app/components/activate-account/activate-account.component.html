@@ -1,0 +1,36 @@
+<div class="activate-account-container">
+  <h2>Activate Your Account</h2>
+  <form [formGroup]="activateForm" (ngSubmit)="activateAccount()">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        formControlName="email"
+        id="email"
+        type="email"
+        placeholder="Enter your email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="activationCode">Activation Code</label>
+      <input
+        formControlName="activationCode"
+        id="activationCode"
+        type="text"
+        placeholder="Enter activation code"
+      />
+    </div>
+
+    <button type="submit" [disabled]="activateForm.invalid">
+      Activate Account
+    </button>
+  </form>
+
+  <div *ngIf="successMessage" class="success-message">
+    <p>{{ successMessage }}</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

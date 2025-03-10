@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+    &:hover {
+      color: #007bff;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      color: #0056b3;
+      transform: translateY(0);
+    }
+  }
+}

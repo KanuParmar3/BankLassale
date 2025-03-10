@@ -1,0 +1,19 @@
+<div class="withdraw-funds-container">
+  <h2>Withdraw Funds</h2>
+
+  <form (ngSubmit)="withdrawFunds()">
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input
+        type="number"
+        [(ngModel)]="amount"
+        id="amount"
+        placeholder="Enter amount to withdraw"
+        required
+        min="1"
+      />
+    </div>
+
+    <button type="submit" [disabled]="!amount">Withdraw</button>
+  </form>
+</div>

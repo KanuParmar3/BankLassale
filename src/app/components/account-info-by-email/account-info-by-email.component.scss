@@ -1,0 +1,83 @@
+.email-search-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #ccc;
+
+  .search-box {
+    margin-bottom: 15px;
+
+    label {
+      font-weight: bold;
+      color: #555;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      border: 2px solid #bbb;
+      border-radius: 5px;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+
+      &:focus {
+        border-color: #888;
+      }
+    }
+
+    button {
+      background: #666;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 1rem;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #444;
+      }
+    }
+  }
+
+  .account-info {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+
+    h3 {
+      color: #333;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ccc;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #444;
+      margin: 5px 0;
+    }
+
+    strong {
+      color: #222;
+    }
+  }
+
+  .error-message {
+    color: #c00;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+}

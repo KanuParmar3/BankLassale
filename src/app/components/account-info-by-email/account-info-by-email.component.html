@@ -1,0 +1,35 @@
+<div class="email-search-container">
+  <div class="search-box">
+    <label for="email">Enter Email to Search:</label>
+    <input
+      type="email"
+      [(ngModel)]="emailInput"
+      id="email"
+      placeholder="Enter email"
+    />
+    <button (click)="getAccountByEmail()">Get Account Info by Email</button>
+  </div>
+
+  <div *ngIf="selectedAccount" class="account-info">
+    <h3>
+      Account Info for {{ selectedAccount.account.firstName }}
+      {{ selectedAccount.account.lastName }}:
+    </h3>
+    <p><strong>Account ID:</strong> {{ selectedAccount.account.accountId }}</p>
+    <p><strong>First Name:</strong> {{ selectedAccount.account.firstName }}</p>
+    <p><strong>Last Name:</strong> {{ selectedAccount.account.lastName }}</p>
+    <p><strong>Email:</strong> {{ selectedAccount.account.email }}</p>
+    <p><strong>Phone:</strong> {{ selectedAccount.account.mobilePhone }}</p>
+  </div>
+
+  <div
+    *ngIf="!selectedAccount && emailInput && emailInput.length > 0"
+    class="error-message"
+  >
+    <p>No account found with the provided email.</p>
+  </div>
+
+  <div *ngIf="emailInput.length === 0" class="error-message">
+    <p>Please enter an email to search.</p>
+  </div>
+</div>

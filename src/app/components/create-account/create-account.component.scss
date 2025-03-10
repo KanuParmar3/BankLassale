@@ -1,0 +1,74 @@
+.create-account-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  .create-account-card {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 1.8rem;
+      color: #1976d2; // Blue for the heading
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+
+      label {
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #1976d2; // Blue border for inputs
+        border-radius: 5px;
+        font-size: 1rem;
+        outline: none;
+        transition: 0.3s;
+
+        &:focus {
+          border-color: #d32f2f; // Red border on focus
+        }
+      }
+    }
+
+    button {
+      background: #1976d2; // Blue button
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #d32f2f; // Red on hover
+      }
+
+      &:disabled {
+        background: #bbb;
+        cursor: not-allowed;
+      }
+    }
+
+    .error-message {
+      color: #d32f2f; // Red for errors
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  }
+}

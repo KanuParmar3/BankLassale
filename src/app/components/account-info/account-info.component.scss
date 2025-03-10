@@ -1,0 +1,49 @@
+.account-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #ccc;
+
+  h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  .account-card {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+
+    p {
+      font-size: 1rem;
+      color: #444;
+      margin: 5px 0;
+    }
+
+    strong {
+      color: #222;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: #ddd;
+      margin: 10px 0;
+    }
+  }
+
+  p:last-child {
+    color: #c00;
+    font-weight: bold;
+  }
+}
