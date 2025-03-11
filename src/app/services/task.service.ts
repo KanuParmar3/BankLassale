@@ -12,9 +12,9 @@ interface AccountResponse {
 })
 export class TaskService {
   private apiUrl =
-    'https://starfish-app-g96va.ondigitalocean.app/v1/accounts/info'; // Original API URL for account info
+    'https://starfish-app-g96va.ondigitalocean.app/v1/accounts/info';
   private balanceApiUrl =
-    'https://starfish-app-g96va.ondigitalocean.app/v1/accounts/balance'; // New API URL for balance
+    'https://starfish-app-g96va.ondigitalocean.app/v1/accounts/balance';
   private transferApiUrl =
     'https://starfish-app-g96va.ondigitalocean.app/v1/transactions/transfer';
   private depositApiUrl =
